@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid #f00 !important; */
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 18px;
+}
+
+/* Header section */
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em 4vw;
+  margin-top: 1em;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  margin-right: 2em;
+}
+
+header > a {
+  display: inline-block;
+  margin-right: -2.5em;
+  align-self: center;
+  padding-top: 0.2em;
+}
+
+header ul {
+  display: flex;
+  width: 50%;
+}
+
+header li {
+  align-self: center;
+  list-style-type: none;
+  margin-right: 2.5em;
+  font-size: 15px;
+  color: hsl(0, 0%, 75%);
+  cursor: pointer;
+}
+
+header li:hover {
+  color: hsl(260, 8%, 14%);
+}
+
+header span {
+  display: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 75%);
+}
+
+header > div > div {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  margin-left: 4em;
+}
+
+header button {
+  background: white;
+  font-size: 15px;
+  border: none;
+  width: 6vw;
+  color: hsl(0, 0%, 75%);
+  cursor: pointer;
+}
+
+header .sign-up {
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border-radius: 50px;
+  padding: 1px;
+  width: 6em;
+}
+
+.sign-up:hover {
+  opacity: 0.5;
+}
+
+.login:hover {
+  color: hsl(260, 8%, 14%);
+}
+
+@media screen and(max-width: 1200px) {
+  header {
+    padding: 1em 2vw;
+  }
+
+  header li,
+  header button {
+    font-size: 7px;
+  }
+
+  header button {
+    width: 3vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    height: 25vh;
+    justify-content: space-evenly;
+    margin-left: 2em;
+  }
+
+  .login {
+    background-color: hsl(257, 27%, 26%);
+    color: white;
+    font-size: 18px;
+    align-self: center;
+    margin-right: 20px;
+  }
+
+  header nav {
+    width: 40vw;
+    margin-right: unset;
+  }
+
+  header > div {
+    display: none;
+  }
+
+  header > div.active {
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(257, 27%, 26%);
+    height: 60vh;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    border-radius: 10px;
+  }
+
+  header li {
+    color: white;
+    font-size: 18px;
+  }
+
+  header span {
+    display: block;
+  }
+
+  header span .cross {
+    display: none;
+  }
+
+  header span .cross.open {
+    display: block;
+  }
+
+  .burger.open {
+    display: none;
+  }
+
+  header > div > div {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25vh;
+    font-size: 18px;
+    margin-left: unset;
+    border-top: 0.3px solid hsl(0, 0%, 75%);
+    width: 60vw;
+  }
+
+  header .sign-up {
+    width: 65vw;
+    align-self: center;
+    height: 5vh;
+  }
+}
+
+/* Hero Section */
+
+.hero-section {
+  height: 60vh;
+  background-image: url("./images/illustration-working.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-section div {
+  padding-left: 6em;
+  width: 50%;
+}
+
+.hero-section h1 {
+  font-size: 70px;
+  color: hsl(260, 8%, 14%);
+}
+
+.hero-section p {
+  color: hsl(0, 0%, 75%);
+  font-size: 15px;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+
+.hero-section button {
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border-radius: 50px;
+  padding: 1px;
+  width: 12em;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hero-section button:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-section h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding-top: 12em;
+    background-size: 550px;
+    background-position: top center;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 50px;
+  }
+
+  .hero-section div {
+    padding-left: 2em;
+    width: 80%;
+    text-align: center;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero-section {
+    padding-top: 14em;
+  }
+}
